@@ -3,11 +3,8 @@ import { useRouteMatch } from "react-router-dom/cjs/react-router-dom.min";
 
 
 
-function HomePage(){
-
-    const {url} = useRouteMatch();
-    console.log(url);
-    console.log(useRouteMatch());
+function HomePage(props){
+    console.log(props)
     return(
         <h2>Homepage</h2>
     )

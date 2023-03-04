@@ -16,6 +16,9 @@ function Menu(){
                     <li>
                         <Link to="/category">Go to Categories</Link>
                     </li>
+                    <li>
+                        <Link to="/products">Go to Products</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

@@ -1,45 +1,40 @@
 import React from "react";
 
 function useAuth(){
-    //lista de roles
-    const rolesList = [
+
+    const productData = [
         {
-            role:"admin",
-            name:["Homura", "Jotaro"],
+          id: 1,
+          name: "NIKE Liteforce Blue Sneakers",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie.",
+          status: "Available",
         },
         {
-            role:"author",
-            name:["Ervin Howell", "Kurtis Weissnat"],
-        }
-    ]
-    //Estados
-    const [username, setUsername] = React.useState(null);
-    const [activedDeletePost, setActivedDeletePost] = React.useState(false);
-    const [idToDelete, setIdToDelete] = React.useState(null);
- 
-    //Acciones de autenticación
-    const login = (inputText)=>{
-        setUsername(inputText);
-    }
-    const logout = ()=>{
-        setUsername(null);
-    }
-    //Acciones por autorización
-    const activedDelete = (id)=>{
-        console.log("ENTRE");
-        setActivedDeletePost(true);
-        setIdToDelete(id);
-        
-    }
+          id: 2,
+          name: "Stylised Flip Flops and Slippers",
+          description:
+            "Mauris finibus, massa eu tempor volutpat, magna dolor euismod dolor.",
+          status: "Out of Stock",
+        },
+        {
+          id: 3,
+          name: "ADIDAS Adispree Running Shoes",
+          description:
+            "Maecenas condimentum porttitor auctor. Maecenas viverra fringilla felis, eu pretium.",
+          status: "Available",
+        },
+        {
+          id: 4,
+          name: "ADIDAS Mid Sneakers",
+          description:
+            "Ut hendrerit venenatis lacus, vel lacinia ipsum fermentum vel. Cras.",
+          status: "Out of Stock",
+        },
+    ];
 
     return {
-        username,
-        activedDeletePost, 
-        rolesList,
-        idToDelete,
-        login,
-        logout,
-        activedDelete,
+        productData
     }; 
 }
 
