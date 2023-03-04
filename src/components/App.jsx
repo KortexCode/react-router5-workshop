@@ -7,6 +7,9 @@ import { GameShopPage } from "../page/GameShopPage";
 import { CategoryPage } from "../page/CategoryPage";
 import { Item } from "../page/CategoryPage";
 import { ProductPage } from "../page/ProductPage";
+import { PrivateRoutePage } from "../page/PrivateRoutePage";
+import { Login } from "./Login";
+import { Admin } from "./Admin";
 
 function App(){
 
@@ -14,27 +17,33 @@ function App(){
         <>
             <Menu></Menu>
             <Switch>
-                 <Route exact path="/" component={HomePage}>
-                 </Route>
-                 <Route path="/blog">
-                     <BlogPage/>
-                 </Route>
-                 <Route path="/game-shop">
-                     <GameShopPage/>
-                 </Route>
-                 <Route path="/category">
-                    <CategoryPage>
-                        <Route path="/category/:name">
-                            <Item/>        
-                        </Route>
-                    </CategoryPage>    
-                 </Route>
-                 <Route path="/products">
-                    <ProductPage/>     
-                 </Route>
-                 <Route path="/:id">
-                      <p>This text will render for any route other than '/'</p>
-                 </Route>
+                    <Route exact path="/" component={HomePage}>
+                    </Route>
+                    <Route path="/blog">
+                        <BlogPage/>
+                    </Route>
+                    <Route path="/game-shop">
+                        <GameShopPage/>
+                    </Route>
+                    <Route path="/category">
+                       <CategoryPage>
+                           <Route path="/category/:name">
+                               <Item/>        
+                           </Route>
+                       </CategoryPage>    
+                    </Route>
+                    <Route path="/products">
+                       <ProductPage/>     
+                    </Route>
+                    <Route path="/login">
+                        <Login />
+                    </Route>
+                    <Route path="/admin" >
+                        <PrivateRoutePage />
+                    </Route>
+                    <Route path="/:id">
+                         <p>This text will render for any route other than '/'</p>
+                    </Route>
             </Switch>
        </>
     )

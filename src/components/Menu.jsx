@@ -19,6 +19,9 @@ function Menu(){
                     <li>
                         <Link to="/products">Go to Products</Link>
                     </li>
+                    <li>
+                        <Link to="/admin">Admin area</Link>
+                    </li>
                 </ul>
             </nav>
         </header>
